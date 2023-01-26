@@ -1,0 +1,651 @@
+:root {
+  --mainColor: #406ab3;
+  --mainColor10: #406ab310;
+  --mainColor30: #406ab330;
+  --secondColor: #eb9c22;
+  --secondColor10: #eb9c2210;
+  --secondColor30: #eb9c2230;
+  --gold: #ffd700;
+  --whiteColor: #ffffff;
+  --blackColor: #1f1f1f;
+  --bodyColor: #fdfeff;
+  --textColor: #898989;
+  --transition: all 0.3s ease-in-out;
+  --shadow: 0px 2px 4px #c1c1c1;
+  --BigShadow: 0 16px 32px 0 #071c1f1a;
+}
+@font-face {
+  font-family: madani;
+  font-display: swap;
+  src: url(../webfonts/Madani.woff);
+}
+* {
+  font-family: "madani", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  // background-color: #eee;
+  border-radius: 0px !important;
+}
+::-webkit-scrollbar-track {
+  border-radius: 0px !important;
+  background: var(--backgroundColor);
+  box-shadow: inset 1px 1px 2px #cfcfd4, inset -1px -1px 2px #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd;
+  outline: none;
+  border-radius: 20px !important;
+}
+:target {
+  scroll-margin-top: 50px;
+}
+a {
+  text-decoration: none;
+  transition: var(--transition) !important;
+  color: var(--blackColor);
+}
+a:hover {
+  text-decoration: none;
+  color: var(--mainColor);
+}
+button {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+.row {
+  margin: 0px;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: 100;
+}
+@media (max-width: 767px) {
+  .container,
+  .container-fluid {
+    padding: 0px 8px;
+  }
+}
+video,
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+}
+.navbar-toggler {
+  border: none;
+  box-shadow: none !important;
+}
+.btn:focus {
+  box-shadow: none;
+}
+body {
+  background-color: var(--bodyColor);
+  overflow-x: hidden;
+}
+input {
+  accent-color: var(--mainColor) !important;
+}
+.odometer-inside {
+  direction: ltr !important;
+}
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.8;
+}
+.fancybox__container {
+  z-index: 1999;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+}
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin: 0 !important;
+  float: none !important;
+  &:checked {
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.25rem #00595b30;
+  }
+}
+::placeholder {
+  font-size: 12px;
+  color: #bababa !important ;
+  font-weight: normal !important;
+}
+[type="email"],
+[type="number"],
+[type="tel"],
+[type="url"] {
+  direction: rtl;
+}
+.swiperContainer {
+  position: relative;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mainColor);
+    background-color: var(--whiteColor);
+    border-radius: 2px;
+    transition: var(--transition);
+    &::after {
+      content: "" !important;
+      background-image: url(../img/icons/arrow.svg);
+      background-size: contain;
+      width: 30px;
+      height: 30px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: var(--transition);
+    }
+    &:hover {
+      background-color: var(--mainColor);
+      color: var(--whiteColor);
+      &::after {
+        filter: invert(1);
+      }
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    left: -60px;
+    right: unset;
+    @media (max-width: 1240px) {
+      left: 0px;
+    }
+  }
+  .swiper-button-prev {
+    right: -60px;
+    left: unset;
+    @media (max-width: 1240px) {
+      right: 0px;
+    }
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+  .swiper-pagination {
+    width: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border-radius: 2px;
+    padding: 0px 10px;
+    transition: var(--transition);
+    .swiper-pagination-bullet {
+      transition: var(--transition);
+      width: 16px;
+      border-radius: 2px;
+      opacity: 0.3;
+      background-color: var(--mainColor);
+      margin: 2px !important;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: var(--mainColor);
+      width: 40px;
+      opacity: 1;
+      transition: var(--transition);
+    }
+  }
+}
+.select2-container--default .select2-selection--single {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  min-height: 54px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+.select2 {
+  min-width: 100px;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  left: 1px;
+  right: unset;
+  top: 50%;
+  transform: translateY(-50%);
+}
+span.select2.select2-container.select2-container--default {
+  width: 100% !important;
+}
+.select2-results__option--selectable {
+  border-radius: 0px;
+  margin-bottom: 2px;
+  padding: 12px;
+}
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--secondColor) !important;
+  color: var(--whiteColor) !important;
+}
+.select2-dropdown {
+  border-radius: 4px;
+  box-shadow: var(--BigShadow) !important;
+  border-color: transparent;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0px;
+}
+// .select2-container {
+//   z-index: 1060;
+// }
+.fancybox__track,
+.fancybox__content,
+.carousel__track {
+  direction: ltr !important;
+}
+.fancybox__caption {
+  text-align: center;
+}
+.filepond--credits {
+  display: none !important;
+}
+.filepond--image-clip {
+  direction: ltr !important;
+}
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////
+.BigTitle {
+  background-image: url(../img/bg.jpg);
+  background-color: var(--mainColor);
+  font-size: 80px;
+  background-clip: text;
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.btn {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--mainColor);
+  padding: 12px 32px;
+  transition: var(--transition);
+  &:hover {
+    background-color: transparent;
+    color: var(--mainColor);
+  }
+  &.btnOutline {
+    background-color: transparent;
+    color: var(--mainColor);
+    &:hover {
+      background-color: var(--mainColor);
+      color: var(--whiteColor);
+    }
+  }
+}
+.btn2 {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+  border: 1px solid var(--secondColor);
+  padding: 12px 32px;
+  transition: var(--transition);
+  &:hover {
+    background-color: transparent;
+    color: var(--secondColor);
+  }
+  &.btnOutline {
+    background-color: transparent;
+    color: var(--secondColor);
+    &:hover {
+      background-color: var(--secondColor);
+      color: var(--whiteColor);
+    }
+  }
+}
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  flex: 1;
+  label {
+    color: var(--textColor);
+  }
+}
+.checkBoxField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 24px;
+  min-width: 150px;
+  label {
+    cursor: pointer;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+.inputForm {
+  border: 1px solid #eee;
+  min-height: 54px;
+  background-color: #fdfdfd;
+  border-radius: 4px;
+  padding: 0 10px;
+  min-width: 150px;
+  width: 100% !important;
+}
+textarea.inputForm {
+  padding: 10px;
+}
+::placeholder {
+  font-size: 12px !important;
+}
+.loginPage {
+  position: relative;
+  min-height: 100vh;
+  padding: 40px 0;
+  background-image: linear-gradient(
+    to right top,
+    #ffd08a,
+    #e7c28c,
+    #91d0ed,
+    #6d9ae6,
+    #4589ff
+  );
+  display: flex;
+  .formContainer {
+    background-color: var(--whiteColor);
+    box-shadow: var(--BigShadow);
+    position: relative;
+    height: 80vh;
+    @media (max-width: 768px) {
+      height: 100%;
+    }
+    width: min(100% - 30px, 1200px);
+    margin: auto;
+    overflow-x: hidden;
+    border-radius: 24px;
+    .sign {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      transition: var(--transition);
+      @media (max-width: 768px) {
+        position: relative;
+      }
+      .imgBox {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: var(--mainColor10);
+        transition: 0.5s ease-in-out;
+        display: flex;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        img {
+          width: 70%;
+          height: 70%;
+          object-fit: cover;
+          margin: auto;
+        }
+        &.imgBox2 {
+          background-color: var(--secondColor10);
+        }
+      }
+      .formBox {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background: var(--whiteColor);
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        transition: 0.5s ease-in-out;
+        overflow-y: auto;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        form {
+          width: min(100% - 30px, 450px);
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin: auto;
+          p {
+            margin-top: 30px;
+          }
+          .col {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+          }
+        }
+
+        p {
+          color: var(--textColor);
+          a {
+            color: var(--mainColor);
+            &:hover {
+              color: var(--secondColor);
+            }
+          }
+        }
+      }
+      &.register {
+        pointer-events: none;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        .formBox {
+          right: 100%;
+        }
+        .imgBox {
+          right: -100%;
+        }
+      }
+      &.login {
+        @media (max-width: 768px) {
+          display: flex;
+        }
+        .formBox {
+          right: 0;
+        }
+        .imgBox {
+          right: 0;
+        }
+      }
+    }
+    &.active {
+      .register {
+        pointer-events: initial;
+        @media (max-width: 768px) {
+          display: flex;
+        }
+        .formBox {
+          right: 0;
+        }
+        .imgBox {
+          right: 0;
+        }
+      }
+      .login {
+        @media (max-width: 768px) {
+          display: none;
+        }
+        .formBox {
+          right: -100%;
+        }
+        .imgBox {
+          right: 100%;
+        }
+      }
+    }
+  }
+  .logo {
+    width: 100%;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 30px;
+  }
+}
+
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+// //////////////////////////////////////////==================
+/* PC device :992px. */
+@media (min-width: 992px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  a,
+  p {
+    font-size: 14px;
+  }
+}
+/* Tablet device :768px. */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Global */
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  a,
+  p {
+    font-size: 14px;
+  }
+}
+/* small mobile :320px. */
+@media (max-width: 768px) {
+  /* Global */
+  body {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  h2 {
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  a,
+  p {
+    font-size: 13px;
+  }
+}
