@@ -395,22 +395,27 @@ textarea.inputForm {
     #ffd08a,
     #e7c28c,
     #91d0ed,
-    #6d9ae6,
+    #b9d3ff,
     #4589ff
   );
+
+  background-size: 400% 400%;
+	animation: gradient 10s ease-in-out infinite;
   display: flex;
+  transition: var(--transition);
   .formContainer {
     background-color: var(--whiteColor);
     box-shadow: var(--BigShadow);
     position: relative;
     height: 80vh;
-    @media (max-width: 768px) {
-      height: 100%;
-    }
     width: min(100% - 30px, 1200px);
     margin: auto;
     overflow-x: hidden;
     border-radius: 24px;
+    transition: var(--transition);
+    @media (max-width: 768px) {
+      height: 100%;
+    }
     .sign {
       position: absolute;
       top: 0;
@@ -427,7 +432,7 @@ textarea.inputForm {
         width: 50%;
         height: 100%;
         background: var(--mainColor10);
-        transition: 0.5s ease-in-out;
+        transition: var(--transition);
         display: flex;
         @media (max-width: 768px) {
           display: none;
@@ -437,6 +442,7 @@ textarea.inputForm {
           height: 70%;
           object-fit: contain;
           margin: auto;
+          transition: var(--transition);
         }
         &.imgBox2 {
           background-color: var(--secondColor10);
@@ -450,7 +456,7 @@ textarea.inputForm {
         display: flex;
         flex-direction: column;
         padding: 30px 20px;
-        transition: 0.5s ease-in-out;
+        transition: var(--transition);
         overflow-y: auto;
         @media (max-width: 768px) {
           width: 100%;
@@ -462,6 +468,7 @@ textarea.inputForm {
           flex-direction: column;
           gap: 16px;
           margin: auto;
+          transition: var(--transition);
           p {
             margin-top: 30px;
           }
@@ -485,7 +492,8 @@ textarea.inputForm {
       &.register {
         pointer-events: none;
         @media (max-width: 768px) {
-          display: none;
+          height: 0;
+          overflow: hidden;
         }
         .formBox {
           right: 100%;
@@ -496,7 +504,8 @@ textarea.inputForm {
       }
       &.login {
         @media (max-width: 768px) {
-          display: flex;
+          height: auto;
+          overflow: unset;
         }
         .formBox {
           right: 0;
@@ -510,7 +519,8 @@ textarea.inputForm {
       .register {
         pointer-events: initial;
         @media (max-width: 768px) {
-          display: flex;
+          height: auto;
+          overflow: unset;
         }
         .formBox {
           right: 0;
@@ -521,7 +531,8 @@ textarea.inputForm {
       }
       .login {
         @media (max-width: 768px) {
-          display: none;
+          height: 0;
+          overflow: hidden;
         }
         .formBox {
           right: -100%;
@@ -537,6 +548,242 @@ textarea.inputForm {
     height: 70px;
     object-fit: contain;
     margin-bottom: 30px;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1024;
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
+  background-color: #ffffff30;
+  @media (max-width: 576px) {
+    background-color: var(--bodyColor);
+  }
+  nav {
+    width: min(100% - 20px, 1320px);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 16px 0;
+    gap: 8px;
+    .logo {
+      margin: auto 0;
+      img {
+        height: 45px;
+        transition: var(--transition);
+        width: 100%;
+        object-fit: contain;
+        @media (max-width: 576px) {
+          height: 35px;
+        }
+      }
+    }
+    .navMenu {
+      display: flex;
+      width: 100%;
+      justify-content: end;
+      gap: 6px;
+      transition: var(--transition);
+      .navLink {
+        padding: 4px 12px;
+        display: flex;
+        align-items: center;
+        color: var(--blackColor);
+        &:hover {
+          color: var(--mainColor);
+        }
+        &.btn {
+          border: 1px solid var(--mainColor);
+          border-radius: 8px;
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+          padding: 8px 24px;
+        }
+      }
+      @media (max-width: 992px) {
+        position: fixed;
+        z-index: -1;
+        right: -100%;
+        top: 0px;
+        width: 100%;
+        height: 100vh;
+        padding: 60px 0;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--bodyColor);
+        align-items: center;
+        .navLink {
+          text-align: center;
+          justify-content: center;
+          padding: 12px;
+        }
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    .navBtn {
+      margin: auto 0;
+      position: relative;
+      min-width: 24px;
+      height: 24px;
+      padding: 5px;
+      cursor: pointer;
+      transition: var(--transition);
+      z-index: 2;
+      span {
+        position: absolute;
+        left: 0;
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: var(--mainColor);
+        margin: 4px 0;
+        transition: var(--transition);
+        &:first-child {
+          top: 0;
+        }
+        &:nth-child(2) {
+          width: 10px;
+          top: 7px;
+        }
+        &:nth-child(3) {
+          width: 16px;
+          bottom: 0;
+        }
+      }
+      &:not(.active):hover span:first-child {
+        width: 16px;
+      }
+      &:not(.active):hover span:nth-child(2) {
+        width: 20px;
+      }
+      &.active {
+        span {
+          background-color: var(--mainColor) !important;
+          &:first-child {
+            transform: rotate(45deg);
+            top: 8px;
+            width: 20px;
+          }
+          &:nth-child(2) {
+            width: 0;
+            opacity: 0;
+          }
+          &:last-child {
+            transform: rotate(-45deg);
+            top: 8px;
+            width: 20px;
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+  }
+  .dropdown {
+    position: relative;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    margin: 0 5px;
+    max-width: 100%;
+    gap: 8px;
+    .dropdown-content {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: calc(0% + 50px);
+      width: 100%;
+      border-radius: 8px;
+      padding: 4px 0px;
+      z-index: 1;
+      background-color: var(--whiteColor);
+      box-shadow: 0px 0px 24px 0px #3b3b3b12;
+      transition: var(--transition);
+      .dropdownItem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 8px 16px;
+        color: var(--blackColor);
+        img {
+          width: 30px;
+          height: 20px;
+          object-fit: cover;
+          border-radius: 4px;
+          margin-left: 8px;
+        }
+      }
+    }
+    &:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      top: 0%;
+    }
+  }
+}
+.headerAnimate {
+  box-shadow: var(--BigShadow);
+  padding: 0 5px;
+  background-color: var(--whiteColor);
+}
+
+.controlSection {
+  width: min(100% - 20px, 1320px);
+  margin: 24px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  border-radius: 16px;
+  gap: 16px;
+  background-color: var(--bodyColor);
+  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  .control {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+    padding: 24px 16px;
+    background-color: var(--mainColor10);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    color: var(--blackColor);
+    position: relative;
+    transition: var(--transition);
+    img {
+      height: 60px;
+      width: 60px;
+      object-fit: contain;
+    }
+    &:hover {
+      z-index: 2;
+      box-shadow: var(--BigShadow);
+      transform: translate(0, -5px);
+    }
   }
 }
 
