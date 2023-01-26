@@ -498,8 +498,8 @@ textarea.inputForm {
 .loginPage .formContainer .sign .imgBox img {
   width: 70%;
   height: 70%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: auto;
 }
 .loginPage .formContainer .sign .imgBox.imgBox2 {

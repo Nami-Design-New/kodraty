@@ -435,7 +435,7 @@ textarea.inputForm {
         img {
           width: 70%;
           height: 70%;
-          object-fit: cover;
+          object-fit: contain;
           margin: auto;
         }
         &.imgBox2 {
