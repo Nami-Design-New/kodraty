@@ -536,7 +536,7 @@ textarea.inputForm {
   transition: var(--transition);
 }
 .loginPage .formContainer .sign .formBox form p {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .loginPage .formContainer .sign .formBox form .col {
   display: flex;
@@ -611,7 +611,7 @@ textarea.inputForm {
   height: 70px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 @-webkit-keyframes gradient {
   0% {
