@@ -807,6 +807,7 @@ header {
           }
         }
         .form_items {
+          position: relative;
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
@@ -857,6 +858,15 @@ header {
           }
           .error {
             color: red;
+            padding: 0;
+            margin: 0;
+            border: none;
+            position: absolute;
+            top: -25px;
+            right: 0;
+            &::after{
+              display: none;
+            }
           }
         }
         .check-list.form_items label {
@@ -870,10 +880,10 @@ header {
         .conditional {
           display: flex;
           flex-direction: column;
-          gap: 8px;
+          gap: 12px;
           padding: 8px 16px;
           border-radius: 8px;
-          background-color: var(--whiteColor);
+          background-color: var(--secondColor10);
         }
       }
       &.active {

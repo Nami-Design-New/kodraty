@@ -904,6 +904,7 @@ header .dropdown:hover .dropdown-content {
   }
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -955,6 +956,15 @@ header .dropdown:hover .dropdown-content {
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items .error {
   color: red;
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: absolute;
+  top: -25px;
+  right: 0;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items .error::after {
+  display: none;
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .check-list.form_items label:after {
   border-radius: 2px;
@@ -965,10 +975,10 @@ header .dropdown:hover .dropdown-content {
 .exam .multisteps_form .multisteps_form_panel .form_content .conditional {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   padding: 8px 16px;
   border-radius: 8px;
-  background-color: var(--whiteColor);
+  background-color: var(--secondColor10);
 }
 .exam .multisteps_form .multisteps_form_panel.active {
   opacity: 1;
