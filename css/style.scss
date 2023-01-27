@@ -398,9 +398,8 @@ textarea.inputForm {
     #b9d3ff,
     #4589ff
   );
-
   background-size: 400% 400%;
-	animation: gradient 10s ease-in-out infinite;
+  animation: gradient 10s ease-in-out infinite;
   display: flex;
   transition: var(--transition);
   .formContainer {
@@ -461,7 +460,6 @@ textarea.inputForm {
         @media (max-width: 768px) {
           width: 100%;
         }
-
         form {
           width: min(100% - 30px, 450px);
           display: flex;
@@ -478,7 +476,6 @@ textarea.inputForm {
             flex-wrap: wrap;
           }
         }
-
         p {
           color: var(--textColor);
           a {
@@ -549,7 +546,6 @@ textarea.inputForm {
     object-fit: contain;
     margin-bottom: 20px;
   }
-
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
@@ -562,7 +558,6 @@ textarea.inputForm {
     }
   }
 }
-
 header {
   position: sticky;
   top: 0;
@@ -749,7 +744,6 @@ header {
   padding: 0 5px;
   background-color: var(--whiteColor);
 }
-
 .controlSection {
   width: min(100% - 20px, 1320px);
   margin: 24px auto;
@@ -783,6 +777,126 @@ header {
       z-index: 2;
       box-shadow: var(--BigShadow);
       transform: translate(0, -5px);
+    }
+  }
+}
+
+.exam {
+  width: min(100% - 20px, 1320px);
+  margin: 24px auto;
+  display: flex;
+  .multisteps_form {
+    width: 100%;
+    height: auto;
+    .multisteps_form_panel {
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      overflow: hidden;
+      height: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .form_content {
+        display: none;
+        .question_title h1 {
+          font-size: 40px;
+          font-weight: 600;
+          @media (max-width: 768px) {
+            font-size: 24px;
+          }
+        }
+        .form_items {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          label {
+            padding: 16px;
+            border: 3px solid #efefef;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+            flex: 1;
+            min-width: 200px;
+            &:after {
+              content: "";
+              width: 20px;
+              height: 20px;
+              top: 8px;
+              left: 8px;
+              position: absolute;
+              border-radius: 100%;
+              border: 2px solid #e2e2e2;
+            }
+            &.active {
+              border: 3px solid #ff980f;
+              transition: var(--transition);
+              &:before {
+                display: block;
+              }
+            }
+            input {
+              opacity: 0;
+            }
+            input:checked + span.checked:after {
+              content: "";
+              top: 12px;
+              left: 12px;
+              position: absolute;
+              background-color: #ffb901;
+              width: 16px;
+              height: 16px;
+              border-radius: 100%;
+            }
+
+            img {
+              width: 100%;
+              height: 150px;
+              object-fit: contain;
+            }
+          }
+          .error {
+            color: red;
+          }
+        }
+        .check-list.form_items label {
+          &:after {
+            border-radius: 2px;
+          }
+          input:checked + span.checked:after {
+            border-radius: 2px;
+          }
+        }
+        .conditional {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding: 8px 16px;
+          border-radius: 8px;
+          background-color: var(--whiteColor);
+        }
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        height: auto;
+        .form_content {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+      }
+      .form_btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        .js-btn-next {
+          margin-right: auto;
+        }
+      }
     }
   }
 }

@@ -872,6 +872,126 @@ header .dropdown:hover .dropdown-content {
   transform: translate(0, -5px);
 }
 
+.exam {
+  width: min(100% - 20px, 1320px);
+  margin: 24px auto;
+  display: flex;
+}
+.exam .multisteps_form {
+  width: 100%;
+  height: auto;
+}
+.exam .multisteps_form .multisteps_form_panel {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  overflow: hidden;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content {
+  display: none;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
+    font-size: 24px;
+  }
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label {
+  padding: 16px;
+  border: 3px solid #efefef;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  left: 8px;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid #e2e2e2;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label.active {
+  border: 3px solid #ff980f;
+  transition: var(--transition);
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label.active:before {
+  display: block;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label input {
+  opacity: 0;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label input:checked + span.checked:after {
+  content: "";
+  top: 12px;
+  left: 12px;
+  position: absolute;
+  background-color: #ffb901;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items label img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .form_items .error {
+  color: red;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .check-list.form_items label:after {
+  border-radius: 2px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .check-list.form_items label input:checked + span.checked:after {
+  border-radius: 2px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_content .conditional {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--whiteColor);
+}
+.exam .multisteps_form .multisteps_form_panel.active {
+  opacity: 1;
+  visibility: visible;
+  overflow: visible;
+  height: auto;
+}
+.exam .multisteps_form .multisteps_form_panel.active .form_content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.exam .multisteps_form .multisteps_form_panel .form_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.exam .multisteps_form .multisteps_form_panel .form_btn .js-btn-next {
+  margin-right: auto;
+}
+
 /* PC device :992px. */
 @media (min-width: 992px) {
   body {

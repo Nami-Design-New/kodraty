@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <!-- title -->
+  <title> قدراتي </title>
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="img/logo.svg" />
+  <!-- aos -->
+  <link rel="stylesheet" href="css/aos.css" />
+  <!-- odometer -->
+  <link rel="stylesheet" href="css/odometer.min.css" />
+  <!-- select2 -->
+  <link rel="stylesheet" href="css/select2.min.css" />
+  <!-- Custom style  -->
+  <link rel="stylesheet" id="styleLink" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- logo -->
+      <a class="logo" href="index.html">
+        <img src="img/logo.svg" />
+      </a>
+      <!-- nav menu -->
+      <div class="navMenu">
+        <a class="navLink" href="index.html"> الرئيسية </a>
+        <a class="navLink" href="account.html"> حسابي </a>
+        <a class="navLink" href="login.html"> تسجيل الدخول </a>
+        <div class="dropdown">
+          <img class="icon me-2" src="img/icons/language.svg" alt="">
+          اللغة
+          <div class="dropdown-content">
+            <a href="#!" id="arabicLanguage" class="dropdownItem">
+              <img src="img/flag.svg" alt="">
+              عربي
+            </a>
+            <a href="#!" id="englishLanguage" class="dropdownItem">
+              <img src="img/en_flag.svg" alt="">
+              English
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- toggle btn -->
+      <div class="navBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <div class="steps_area" hidden>
+    <div class="progress_bar step_items ">
+      <div class="step active current"></div>
+      <div class="step"></div>
+      <div class="step last">
+      </div>
+    </div>
+  </div>
+  <!-- exam -->
+  <section class="exam">
+    <form class="multisteps_form" id="wizard" action="">
+      <!------------------- Step-1 -------------------->
+      <div class="multisteps_form_panel active">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> اسمك ايه </h1>
+          </div>
+          <!-- question options -->
+          <div class=" form_items radio-list">
+            <!-- option -->
+            <label id="option1-1" class="step_1 ">
+              <h5> انسان </h5>
+              <input for="option1-1" type="radio" class="required" name="stp_1_option" value="انسان">
+            </label>
+            <!-- option -->
+            <label id="option1-2" class="step_1">
+              <h5> محمود </h5>
+              <p> مع ذكر اسم الاب </p>
+              <input for="option1-2" type="radio" class="required" name="stp_1_option" value="محمود" id="condition2">
+            </label>
+            <!-- option -->
+            <label id="option1-3" class="step_1">
+              <h5> حيوان </h5>
+              <p> مع ذكر نوع الحيوان </p>
+              <input for="option1-3" type="radio" class="required" name="stp_1_option" value="حيوان" id="condition3">
+            </label>
+            <!-- option -->
+            <label id="option1-4" class="step_1 ">
+              <h5> محمد </h5>
+              <input for="option1-4" type="radio" class="required" name="stp_1_option" value="محمد">
+            </label>
+          </div>
+          <!-- condition -->
+          <div class="conditional" data-condition="#condition2 && stp_1_option == 'محمود'">
+            <label for="field" class="form-label"> ما هو اسم الاب </label>
+            <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
+          </div>
+          <!-- condition -->
+          <div class="conditional" data-condition="#condition3 && stp_1_option == 'حيوان'">
+            <label for="field" class="form-label"> ما هو نوع الحيوان </label>
+            <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
+          </div>
+
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-next btn">السؤال التالي</button>
+        </div>
+      </div>
+      <!------------------- Step-2 -------------------->
+      <div class="multisteps_form_panel ">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> عايش من امتي </h1>
+          </div>
+          <!-- question options -->
+          <div class=" form_items radio-list">
+            <!-- option -->
+            <label id="option2-1" class="step_2 ">
+              <h5> زمان </h5>
+              <input for="option2-1" type="radio" class="required" name="stp_2_option" value="زمان">
+            </label>
+            <!-- option -->
+            <label id="option2-2" class="step_2">
+              <h5> 10 </h5>
+              <input for="option2-2" type="radio" class="required" name="stp_2_option" value="10">
+            </label>
+            <!-- option -->
+            <label id="option2-3" class="step_2">
+              <h5> 15 </h5>
+              <input for="option2-3" type="radio" class="required" name="stp_2_option" value="15">
+            </label>
+            <!-- option -->
+            <label id="option2-4" class="step_2 ">
+              <h5> 30 </h5>
+              <input for="option2-4" type="radio" class="required" name="stp_2_option" value="30">
+            </label>
+          </div>
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-prev btn btnOutline"> السؤال السابق </button>
+          <button type="button" class="js-btn-next btn">السؤال التالي</button>
+        </div>
+      </div>
+      <!------------------- Step-3 -------------------->
+      <div class="multisteps_form_panel ">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> اختر من الصور </h1>
+          </div>
+          <!-- question options -->
+          <div class=" form_items radio-list">
+            <!-- option -->
+            <label id="option3-1" class="step_2 ">
+              <img src="img/Thesis-pana.svg" alt="">
+              <input for="option3-1" type="radio" name="stp_2_option" value="1">
+            </label>
+            <!-- option -->
+            <label id="option3-2" class="step_2">
+              <img src="img/Thesis-rafiki.svg" alt="">
+              <input for="option3-2" type="radio" name="stp_2_option" value="2">
+            </label>
+            <!-- option -->
+            <label id="option3-3" class="step_2">
+              <img src="img/logo.svg" alt="">
+              <input for="option3-3" type="radio" name="stp_2_option" value="3">
+            </label>
+            <!-- option -->
+            <label id="option3-4" class="step_2 ">
+              <img src="img/exam3.png" alt="">
+              <input for="option3-4" type="radio" name="stp_2_option" value="4">
+            </label>
+          </div>
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-prev btn btnOutline"> السؤال السابق </button>
+          <button type="button" class="js-btn-next btn">السؤال التالي</button>
+        </div>
+      </div>
+      <!------------------ Step-4 -------------------->
+      <div class="multisteps_form_panel">
+        <!-- form-content -->
+        <div class="form_content">
+          <!-- question -->
+          <div class="question_title">
+            <h1> مما تتكون الاسرة ؟ </h1>
+          </div>
+          <!-- question options -->
+          <div class="form_items check-list">
+            <!-- option -->
+            <label id="option4-1" class="step_2 checkbox ">
+              <h5> الاب </h5>
+              <input for="option4-1" type="checkbox" class="required" name="stp_2_select_option" value="الاب">
+            </label>
+            <!-- option -->
+            <label id="option4-2" class="step_2 checkbox ">
+              <h5> الام </h5>
+              <input for="option4-2" type="checkbox" class="required" name="stp_2_select_option" value="الام">
+            </label>
+            <!-- option -->
+            <label id="option4-3" class="step_2 checkbox ">
+              <h5>الصديق</h5>
+              <input for="option4-3" type="checkbox" class="required" name="stp_2_select_option" value="الصديق">
+            </label>
+          </div>
+        </div>
+        <!-- Form-btn -->
+        <div class="form_btn">
+          <button type="button" class="js-btn-prev btn btnOutline"> السؤال السابق </button>
+          <button type="submit" class="btn2"> انهاء الاختبار </button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--/////////////////////////////JavaScript/////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!--////////////////////////////////////////////////////////////////////////////////-->
+  <!-- jquery -->
+  <script src="js/jquery.min.js"></script>
+  <!-- apper -->
+  <script src="js/jquery.appear.js"></script>
+  <!-- aos -->
+  <script src="js/aos.js"></script>
+  <!-- odometer  -->
+  <script src="js/odometer.min.js"></script>
+  <!-- select2  -->
+  <script src="js/select2.min.js"></script>
+  <!-- custom -->
+  <script src="js/custom.js"></script>
+
+  <!-- jQuery-validate-js include -->
+  <script src="js/exam/jquery.validate.min.js"></script>
+  <!-- jQuery-validate-js include -->
+  <script src="js/exam/conditionize.flexible.jquery.min.js"></script>
+  <!-- Custom-js include -->
+  <script src="js/exam/script.js"></script>
+</body>
+
+</html>
