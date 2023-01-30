@@ -895,12 +895,12 @@ header .dropdown:hover .dropdown-content {
   display: none;
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
 }
 @media (max-width: 768px) {
   .exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items {
@@ -937,6 +937,7 @@ header .dropdown:hover .dropdown-content {
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items label input {
   opacity: 0;
+  position: absolute;
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items label input:checked + span.checked:after {
   content: "";
@@ -1000,6 +1001,154 @@ header .dropdown:hover .dropdown-content {
 }
 .exam .multisteps_form .multisteps_form_panel .form_btn .js-btn-next {
   margin-right: auto;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer .answerBtn {
+  color: var(--secondColor);
+  font-weight: bold;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer .answerBtn img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer .answer {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--secondColor10);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer .answer h6 {
+  font-size: 12px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.exam .multisteps_form .multisteps_form_panel .correctAnswer .answer img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.routeNav {
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  background-color: var(--bodyColor);
+  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  padding: 16px;
+  padding-right: 24px;
+  margin-top: 24px;
+  width: min(100% - 20px, 1320px);
+  margin: 0px auto;
+}
+.routeNav .Back {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 100%;
+  transition: var(--transition);
+  font-size: 20px;
+  border: none;
+}
+.routeNav .Back img {
+  width: 16px;
+  height: 16px;
+  transform: scaleX(-1);
+  filter: invert(1);
+}
+.routeNav .Back:hover {
+  background-color: var(--mainColor);
+}
+.routeNav .navigetor {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
+  list-style: none;
+}
+.routeNav .navigetor li {
+  position: relative;
+}
+.routeNav .navigetor li a {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+.routeNav .navigetor li a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+.routeNav .navigetor li::after {
+  content: "-";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.routeNav .navigetor li:last-child a {
+  color: var(--textColor);
+}
+.routeNav .navigetor li:last-child::after {
+  display: none;
+}
+
+.allReportsPage {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  border-radius: 16px;
+  gap: 16px;
+  width: min(100% - 20px, 1320px);
+  margin: 0 auto;
+}
+.allReportsPage .reportMain {
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  padding: 24px 16px;
+  background-color: var(--secondColor10);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  color: var(--blackColor);
+  position: relative;
+  transition: var(--transition);
+}
+.allReportsPage .reportMain img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.allReportsPage .reportMain:hover {
+  z-index: 2;
+  box-shadow: var(--BigShadow);
+  transform: translate(0, -5px);
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
 }
 
 /* PC device :992px. */

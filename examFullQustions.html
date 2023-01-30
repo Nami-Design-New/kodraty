@@ -56,32 +56,6 @@
       </div>
     </nav>
   </header>
-
-
-  <!-- route Nav -->
-  <section class="routeNav">
-    <button onclick="history.back()" class="Back">
-      <img src="img/arrow.svg" alt="">
-    </button>
-    <ul class="navigetor">
-      <li>
-        <a href="index.html">
-          الرئيسية
-        </a>
-      </li>
-      <li>
-        <a href="startForm.html">
-          الاختبارات
-        </a>
-      </li>`
-      <li>
-        <a href="#!">
-          اختبار رقم 1
-        </a>
-      </li>
-    </ul>
-  </section>
-
   <div class="steps_area" hidden>
     <div class="progress_bar step_items ">
       <div class="step active current"></div>
@@ -90,7 +64,6 @@
       </div>
     </div>
   </div>
-
   <!-- exam -->
   <section class="exam">
     <form class="multisteps_form" id="wizard" action="">
@@ -106,24 +79,36 @@
           <div class=" form_items radio-list">
             <!-- option -->
             <label id="option1-1">
-              <h5> خالد </h5>
-              <input for=" option1-1" type="radio" class="required" name="stp_1_option" value="خالد">
+              <h5> انسان </h5>
+              <input for=" option1-1" type="radio" class="required" name="stp_1_option" value="انسان">
             </label>
             <!-- option -->
             <label id="option1-2">
               <h5> محمود </h5>
-              <input for="option1-2" type="radio" class="required" name="stp_1_option" value="محمود">
+              <p> مع ذكر اسم الاب </p>
+              <input for="option1-2" type="radio" class="required" name="stp_1_option" value="محمود" id="condition2">
             </label>
             <!-- option -->
             <label id="option1-3">
-              <h5> حسام </h5>
-              <input for="option1-3" type="radio" class="required" name="stp_1_option" value="حسام">
+              <h5> حيوان </h5>
+              <p> مع ذكر نوع الحيوان </p>
+              <input for="option1-3" type="radio" class="required" name="stp_1_option" value="حيوان" id="condition3">
             </label>
             <!-- option -->
             <label id="option1-4">
               <h5> محمد </h5>
               <input for=" option1-4" type="radio" class="required" name="stp_1_option" value="محمد">
             </label>
+          </div>
+          <!-- condition -->
+          <div class="conditional" data-condition="#condition2 && stp_1_option == 'محمود'">
+            <label for="field" class="form-label"> ما هو اسم الاب </label>
+            <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
+          </div>
+          <!-- condition -->
+          <div class="conditional" data-condition="#condition3 && stp_1_option == 'حيوان'">
+            <label for="field" class="form-label"> ما هو نوع الحيوان </label>
+            <input type="text" name="field" class="inputForm required" minlength="2" placeholder="اكتب هنا ...">
           </div>
 
         </div>
@@ -137,7 +122,7 @@
           <a href="#!" class="answerBtn"> <img src="img/idea.gif" alt=""> عرض الحل ؟ </a>
           <div class="answer">
             <h6> الحل هو .. </h6>
-            <p> محمود </p>
+            <p> انسان </p>
           </div>
         </div>
       </div>
@@ -147,13 +132,13 @@
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> ما هو عدد القارات ؟ </h1>
+            <h1> عايش من امتي </h1>
           </div>
           <!-- question options -->
           <div class=" form_items radio-list">
             <!-- option -->
             <label id="option2-1">
-              <h5> 7 </h5>
+              <h5> زمان </h5>
               <input for=" option2-1" type="radio" class="required" name="stp_2_option" value="زمان">
             </label>
             <!-- option -->
@@ -163,12 +148,12 @@
             </label>
             <!-- option -->
             <label id="option2-3">
-              <h5> 3 </h5>
+              <h5> 15 </h5>
               <input for="option2-3" type="radio" class="required" name="stp_2_option" value="15">
             </label>
             <!-- option -->
             <label id="option2-4">
-              <h5> 5 </h5>
+              <h5> 30 </h5>
               <input for=" option2-4" type="radio" class="required" name="stp_2_option" value="30">
             </label>
           </div>
@@ -183,7 +168,7 @@
           <a href="#!" class="answerBtn"> <img src="img/idea.gif" alt=""> عرض الحل ؟ </a>
           <div class="answer">
             <h6> الحل هو .. </h6>
-            <p> 7 </p>
+            <p> زمان </p>
           </div>
         </div>
       </div>
@@ -193,26 +178,30 @@
         <div class="form_content">
           <!-- question -->
           <div class="question_title">
-            <h1> اختر من الزاوية الحادة </h1>
+            <h1> اختر من الصور </h1>
           </div>
           <!-- question options -->
           <div class=" form_items radio-list">
             <!-- option -->
             <label id="option3-1">
-              <img src="img/45.png" alt="">
+              <img src="img/Thesis-pana.svg" alt="">
               <input for="option3-1" type="radio" name="stp_2_option" value="1">
             </label>
             <!-- option -->
             <label id="option3-2">
-              <img src="img/90.png" alt="">
+              <img src="img/Thesis-rafiki.svg" alt="">
               <input for="option3-2" type="radio" name="stp_2_option" value="2">
             </label>
             <!-- option -->
             <label id="option3-3">
-              <img src="img/125.png" alt="">
+              <img src="img/logo.svg" alt="">
               <input for="option3-3" type="radio" name="stp_2_option" value="3">
             </label>
-        
+            <!-- option -->
+            <label id="option3-4">
+              <img src="img/exam3.png" alt="">
+              <input for="option3-4" type="radio" name="stp_2_option" value="4">
+            </label>
           </div>
         </div>
         <!-- Form-btn -->
@@ -226,7 +215,7 @@
           <a href="#!" class="answerBtn"> <img src="img/idea.gif" alt=""> عرض الحل ؟ </a>
           <div class="answer">
             <h6> الحل هو .. </h6>
-            <img src="img/45.png" alt="">
+            <img src="img/Thesis-pana.svg" alt="">
           </div>
         </div>
 
@@ -240,21 +229,21 @@
             <h1> مما تتكون الاسرة ؟ </h1>
           </div>
           <!-- question options -->
-          <div class="form_items radio-list">
+          <div class="form_items check-list">
             <!-- option -->
-            <label id="option4-1">
+            <label id="option4-1" checkbox>
               <h5> الاب </h5>
-              <input for=" option4-1" type="radio" class="required" name="stp_4_select_option" value="الاب">
+              <input for=" option4-1" type="checkbox" class="required" name="stp_2_select_option" value="الاب">
             </label>
             <!-- option -->
-            <label id="option4-2">
+            <label id="option4-2" checkbox>
               <h5> الام </h5>
-              <input for=" option4-2" type="radio" class="required" name="stp_4_select_option" value="الام">
+              <input for=" option4-2" type="checkbox" class="required" name="stp_2_select_option" value="الام">
             </label>
             <!-- option -->
-            <label id="option4-3">
-              <h5> كل ما سبق </h5>
-              <input for=" option4-3" type="radio" class="required" name="stp_4_select_option" value="الصديق">
+            <label id="option4-3" checkbox>
+              <h5>الصديق</h5>
+              <input for=" option4-3" type="checkbox" class="required" name="stp_2_select_option" value="الصديق">
             </label>
           </div>
         </div>
@@ -288,6 +277,8 @@
 
   <!-- jQuery-validate-js include -->
   <script src="js/exam/jquery.validate.min.js"></script>
+  <!-- jQuery-validate-js include -->
+  <script src="js/exam/conditionize.flexible.jquery.min.js"></script>
   <!-- Custom-js include -->
   <script src="js/exam/script.js"></script>
 
