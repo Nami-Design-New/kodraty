@@ -1028,18 +1028,17 @@ header {
     }
   }
 }
-.allReportsPage {
+.allExamsPage {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
   border-radius: 16px;
   gap: 16px;
   width: min(100% - 20px, 1320px);
   margin: 0 auto;
-  .reportMain {
+  .singleExam {
     text-align: center;
     flex: 1;
-    min-width: 250px;
+    min-width: 160px;
     padding: 24px 16px;
     background-color: var(--secondColor10);
     border-radius: 16px;
