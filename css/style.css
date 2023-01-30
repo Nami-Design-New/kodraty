@@ -1131,7 +1131,7 @@ header .dropdown:hover .dropdown-content {
 .allExamsPage .singleExam {
   text-align: center;
   flex: 1;
-  min-width: 160px;
+  min-width: 250px;
   padding: 24px 16px;
   background-color: var(--secondColor10);
   border-radius: 16px;
