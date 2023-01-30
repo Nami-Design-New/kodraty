@@ -59,7 +59,7 @@ $(function () {
     const DOMstrings = {
       stepsBtnClass: 'step',
       stepsBtns: document.querySelectorAll(`.step`),
-      stepsBar: document.querySelector('.progress_bar'),
+      // stepsBar: document.querySelector('.progress_bar'),
       stepsForm: document.querySelector('.multisteps_form'),
       stepFormPanelClass: 'multisteps_form_panel',
       stepFormPanels: document.querySelectorAll('.multisteps_form_panel'),
@@ -184,24 +184,24 @@ $(function () {
     };
   
     //STEPS BAR CLICK FUNCTION
-    DOMstrings.stepsBar.addEventListener('click', e => {
+    // DOMstrings.stepsBar.addEventListener('click', e => {
   
-      //check if click target is a step button
-      const eventTarget = e.target;
+    //   //check if click target is a step button
+    //   const eventTarget = e.target;
   
-      if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
-        return;
-      }
+    //   if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
+    //     return;
+    //   }
   
-      //get active button step number
-      const activeStep = getActiveStep(eventTarget);
+    //   //get active button step number
+    //   const activeStep = getActiveStep(eventTarget);
   
-      //set all steps before clicked (and clicked too) to active
-      // setActiveStep(activeStep);
+    //   //set all steps before clicked (and clicked too) to active
+    //   // setActiveStep(activeStep);
   
-      //open active panel
-      // setActivePanel(activeStep);
-    });
+    //   //open active panel
+    //   // setActivePanel(activeStep);
+    // });
   
     //PREV/NEXT BTNS CLICK
     DOMstrings.stepsForm.addEventListener('click', e => {

@@ -692,6 +692,11 @@ header {
         display: none;
       }
     }
+    .icon{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
   }
   .dropdown {
     position: relative;
@@ -780,7 +785,6 @@ header {
     }
   }
 }
-
 .exam {
   width: min(100% - 20px, 1320px);
   margin: 24px auto;
@@ -850,10 +854,9 @@ header {
               height: 16px;
               border-radius: 100%;
             }
-
             img {
               width: 100%;
-              height: 150px;
+              height: 100px;
               object-fit: contain;
             }
           }
@@ -908,12 +911,11 @@ header {
           margin-right: auto;
         }
       }
-
       .correctAnswer {
         display: flex;
         flex-direction: column;
         gap: 8px;
-
+        margin-bottom: 16px;
         .answerBtn {
           color: var(--secondColor);
           font-weight: bold;
@@ -940,7 +942,7 @@ header {
           }
           img {
             width: 100%;
-            height: 200px;
+            height: 100px;
             object-fit: contain;
           }
         }
@@ -948,7 +950,6 @@ header {
     }
   }
 }
-
 .routeNav {
   // position: sticky;
   // top: 0;
@@ -1027,7 +1028,6 @@ header {
     }
   }
 }
-
 .allReportsPage {
   display: flex;
   flex-wrap: wrap;
@@ -1061,10 +1061,13 @@ header {
       transform: translate(0, -5px);
       background-color: var(--secondColor);
       color: var(--whiteColor);
-
     }
   }
 }
+
+
+
+
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
