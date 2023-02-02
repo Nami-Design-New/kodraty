@@ -1070,15 +1070,15 @@ header {
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 32px;
   @media (max-width: 992px) {
     flex-direction: column;
   }
   .profileSide {
-    padding: 16px ;
+    padding: 16px;
     border-radius: 16px;
-    background-color: var(--whiteColor);
-    box-shadow: var(--BigShadow);
+    background-color: var(--mainColor10);
+    // box-shadow: var(--BigShadow);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -1087,9 +1087,9 @@ header {
     min-height: calc(100vh - 210px);
     &::after {
       content: "";
-      width: 3px;
+      width: 6px;
       height: calc(100% - 48px);
-      background-color: #eee;
+      background-color: #406ab310;
       position: absolute;
       left: 6px;
       bottom: 50%;
@@ -1113,7 +1113,7 @@ header {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      width: 100% ;
+      width: 100%;
       .name {
         font-weight: bold;
       }
@@ -1149,7 +1149,7 @@ header {
             height: 80%;
             background-color: var(--secondColor);
             position: absolute;
-            left: -12px;
+            left: -10px;
             top: 50%;
             transform: translateY(-50%);
             border-radius: 10px;
@@ -1162,7 +1162,6 @@ header {
         color: red;
         .icon {
           filter: grayscale(0);
-
         }
       }
     }
@@ -1201,15 +1200,151 @@ header {
   .profileContent {
     flex: 1;
     min-height: 100px;
-    padding: 30px;
-    background-color: var(--whiteColor);
+    // padding: 30px;
+    // background-color: var(--whiteColor);
     border-radius: 16px;
-    @media (max-width: 992px) {
-      padding: 30px 0;
+    // @media (max-width: 992px) {
+    //   padding: 30px 0;
+    // }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: auto;
+      transition: var(--transition);
+      padding: 24px;
+      background-color: var(--whiteColor);
+      border-radius: 16px;
+      p {
+        margin-top: 10px;
+      }
+      .col {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
     }
-    
   }
 }
+
+:root {
+  --percentsize: 200px;
+}
+@media (max-width: 576px) {
+  :root {
+    --percentsize: 100px;
+  }
+}
+.percent {
+  position: relative;
+  width: var(--percentsize);
+  height: var(--percentsize);
+  overflow: hidden;
+  .percentNum {
+    position: absolute;
+    width: calc(var(--percentsize) * 0.8);
+    height: calc(var(--percentsize) * 0.8);
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--percentsize) * 0.06);
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #eee;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: calc(var(--percentsize) * 0.2) !important;
+    font-weight: bold;
+    line-height: 24px;
+    span {
+      font-weight: normal;
+      color: #777;
+      font-size: calc(var(--percentsize) * 0.12) !important;
+      margin-bottom: calc(var(--percentsize) * -0.06);
+    }
+  }
+  // the slice (mask)
+  .slice {
+    position: absolute;
+    width: var(--percentsize);
+    height: var(--percentsize);
+    clip: rect(
+      0px,
+      var(--percentsize),
+      var(--percentsize),
+      calc(var(--percentsize) / 2)
+    );
+  }
+  // circle to show the status
+  .bar {
+    position: absolute;
+    border: calc(var(--percentsize) * 0.04) solid var(--secondColor);
+    width: var(--percentsize);
+    height: var(--percentsize);
+    clip: rect(0px, calc(var(--percentsize) / 2), var(--percentsize), 0px);
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  // loop to create all needed elements automatically
+  @for $j from 51 through 100 {
+    &.p#{$j} .slice {
+      clip: rect(auto, auto, auto, auto);
+    }
+    &.p#{$j} .bar:after {
+      transform: rotate(180deg);
+    }
+    &.p#{$j} .fill {
+      position: absolute;
+      border: calc(var(--percentsize) * 0.04) solid var(--secondColor);
+      width: var(--percentsize);
+      height: var(--percentsize);
+      clip: rect(0px, calc(var(--percentsize) / 2), var(--percentsize), 0px);
+      border-radius: 50%;
+      transform: rotate(180deg);
+    }
+  }
+  // loop to rotate all 100 circles
+  @for $j from 1 through 100 {
+    &.p#{$j} .bar {
+      transform: rotate((360/100 * $j) + deg);
+    }
+  }
+}
+
+
+.allPercent {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  .percentDiv {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    border-radius: 16px;
+    background-color: var(--secondColor10);
+    text-align: center;
+    border: 2px solid var(--secondColor30);
+    flex: 1;
+    min-width: 120px;
+  }
+  .count{
+    .countLine{
+      font-weight: bold;
+      font-size: calc(var(--percentsize) * 0.3) !important;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
