@@ -1198,7 +1198,11 @@ header {
   }
   .profileContent {
     flex: 1;
-    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    
     // padding: 30px;
     // background-color: var(--whiteColor);
     border-radius: 16px;
@@ -1224,11 +1228,27 @@ header {
         flex-wrap: wrap;
       }
     }
+    
+    .allExamsPage{
+      width: 100%;
+      padding-top: 30px;
+      .myExamTitle{
+        width: 100%;
+        font-weight: bold;
+      }
+      .singleExam{
+        background-color: var(--mainColor10);
+        &:hover{
+          background-color: var(--mainColor);
+        }
+      }
+    }
+
   }
 }
 
 :root {
-  --percentsize: 200px;
+  --percentsize: 160px;
 }
 @media (max-width: 576px) {
   :root {

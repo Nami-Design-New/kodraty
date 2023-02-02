@@ -1298,7 +1298,9 @@ header .dropdown:hover .dropdown-content {
 }
 .profile .profileContent {
   flex: 1;
-  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
   border-radius: 16px;
 }
 .profile .profileContent .eaditAccount {
@@ -1319,9 +1321,23 @@ header .dropdown:hover .dropdown-content {
   gap: 16px;
   flex-wrap: wrap;
 }
+.profile .profileContent .allExamsPage {
+  width: 100%;
+  padding-top: 30px;
+}
+.profile .profileContent .allExamsPage .myExamTitle {
+  width: 100%;
+  font-weight: bold;
+}
+.profile .profileContent .allExamsPage .singleExam {
+  background-color: var(--mainColor10);
+}
+.profile .profileContent .allExamsPage .singleExam:hover {
+  background-color: var(--mainColor);
+}
 
 :root {
-  --percentsize: 200px;
+  --percentsize: 160px;
 }
 
 @media (max-width: 576px) {
