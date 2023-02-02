@@ -1336,6 +1336,35 @@ header .dropdown:hover .dropdown-content {
   background-color: var(--mainColor);
 }
 
+.bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  border-radius: 20px;
+  background-color: #eee;
+  position: relative;
+  isolation: isolate;
+  font-size: 12px;
+  color: var(--mainColor);
+}
+.bar .inside {
+  background-color: var(--mainColor30);
+  border-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: -1;
+}
+.bar.end {
+  color: var(--textColor);
+}
+.bar.end .inside {
+  background-color: #c7c7c7;
+}
+
 :root {
   --percentsize: 160px;
 }
