@@ -358,6 +358,7 @@ body {
   border: 1px solid var(--mainColor);
   padding: 12px 32px;
   transition: var(--transition);
+  border-radius: 8px;
 }
 .btn:hover {
   background-color: transparent;
@@ -378,6 +379,7 @@ body {
   border: 1px solid var(--secondColor);
   padding: 12px 32px;
   transition: var(--transition);
+  border-radius: 8px;
 }
 .btn2:hover {
   background-color: transparent;
@@ -1200,7 +1202,7 @@ header .dropdown:hover .dropdown-content {
   margin-bottom: 8px;
 }
 .profile .profileSide .userInfo {
-  background: linear-gradient(45deg, rgba(229, 229, 229, 0.862745098), #ffffff);
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5568627451), #ffffff);
   padding: 16px;
   border-radius: 12px;
   color: var(--mainColor);
@@ -1211,6 +1213,7 @@ header .dropdown:hover .dropdown-content {
 }
 .profile .profileSide .userInfo .name {
   font-weight: bold;
+  font-size: 18px !important;
 }
 .profile .profileSide .links {
   height: 100%;
@@ -1267,8 +1270,8 @@ header .dropdown:hover .dropdown-content {
   }
   .profile .profileSide::after {
     bottom: 0;
-    left: 0;
-    width: 100%;
+    left: 10%;
+    width: 80%;
     height: 2px;
   }
   .profile .profileSide .userInfo {
@@ -1298,7 +1301,7 @@ header .dropdown:hover .dropdown-content {
   min-height: 100px;
   border-radius: 16px;
 }
-.profile .profileContent form {
+.profile .profileContent .eaditAccount {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1308,10 +1311,10 @@ header .dropdown:hover .dropdown-content {
   background-color: var(--whiteColor);
   border-radius: 16px;
 }
-.profile .profileContent form p {
+.profile .profileContent .eaditAccount p {
   margin-top: 10px;
 }
-.profile .profileContent form .col {
+.profile .profileContent .eaditAccount .col {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
@@ -2449,6 +2452,105 @@ header .dropdown:hover .dropdown-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.package {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 30px 16px;
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  text-align: center;
+}
+.package h3 {
+  font-weight: bold;
+}
+.package form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.package form .form-check {
+  padding: 5px;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+.package form .form-check .form-check-input {
+  display: none;
+}
+.package form .form-check .form-check-label {
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  padding: 20px;
+  border-radius: 16px;
+  border: 3px solid #f9f9f9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.package form .form-check .form-check-label .info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.package form .form-check .form-check-label .info h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.package form .form-check .form-check-label .info p {
+  color: #777;
+}
+.package form .form-check .form-check-label .info ul {
+  padding: 8px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
+.package form .form-check .form-check-label .price {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #eee;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  border-radius: 100px;
+  padding: 12px 8px;
+  font-size: 10px;
+  transition: var(--transition);
+}
+.package form .form-check .form-check-label .price strong {
+  font-size: 20px;
+}
+.package form .form-check .form-check-label img {
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  min-width: 60px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label {
+  border: 3px solid var(--secondColor);
+  box-shadow: 0px 0px 20px #eee;
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label .price {
+  background-color: var(--secondColor);
+  color: var(--whiteColor);
+}
+.package form .btnDiv {
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }
 
 /* PC device :992px. */

@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="css/select2.min.css" />
   <!-- Custom style  -->
   <link rel="stylesheet" id="styleLink" href="css/style.css" />
-
 </head>
 
 <body>
@@ -58,7 +57,6 @@
       </div>
     </nav>
   </header>
-
   <!-- route Nav -->
   <section class="routeNav">
     <button onclick="history.back()" class="Back">
@@ -77,32 +75,82 @@
       </li>
     </ul>
   </section>
-
-
   <!-- profile -->
   <section class="profile">
     <!-- side -->
     <div class="profileSide">
       <div class="userInfo">
-        <h1 class="name"> محمود الكومي  </h1>
+        <h1 class="name"> محمود الكومي </h1>
         <p class="phone"> +99612345678 </p>
       </div>
       <div class="links">
         <a href="account.html"> <img class="icon" src="img/student.svg" alt=""> حسابي </a>
-        <a class="active" href="accountSubscribe.html"> <img class="icon" src="img/subscribe.svg" alt="">  الاشتراك </a>
-        <a href="accountEdit.html"> <img class="icon" src="img/edit.svg" alt="">  تعديل الحساب </a>
-        <a class="logOut" href="index.html"> <img class="icon" src="img/logout.svg" alt="">  تسجيل الخروج </a>
+        <a class="active" href="accountSubscribe.html"> <img class="icon" src="img/subscribe.svg" alt=""> الاشتراك </a>
+        <a href="accountEdit.html"> <img class="icon" src="img/edit.svg" alt=""> تعديل الحساب </a>
+        <a class="logOut" href="index.html"> <img class="icon" src="img/logout.svg" alt=""> تسجيل الخروج </a>
       </div>
     </div>
     <!-- Content -->
     <div class="profileContent">
-
-
+      <!-- packages -->
+      <section class="package">
+        <h3> اشترك في الباقات و استمتع بخصومات اكبر ... </h3>
+        <form action="">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="package" id="package1">
+            <label class="form-check-label" for="package1">
+              <img src="img/bronze.svg" alt="">
+              <div class="info">
+                <h4> الباقة البرونزية </h4>
+                <p> احصل علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مستمرة لمدة شهر</p>
+                <ul>
+                  <li> احصل علي 10 اختبارات </li>
+                  <li> عرض الحل 5 مرات </li>
+                  <li> خصم 20% عند التجديد </li>
+                </ul>
+              </div>
+              <span class="price"> <strong> 20 </strong> ريال </span>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="package" id="package2">
+            <label class="form-check-label" for="package2">
+              <img src="img/silver.svg" alt="">
+              <div class="info">
+                <h4> الباقة الفضية </h4>
+                <p> احصل علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مستمرة لمدة 6 شهور</p>
+                <ul>
+                  <li> احصل علي 30 اختبارات </li>
+                  <li> عرض الحل 25 مرات </li>
+                  <li> خصم 30% عند التجديد </li>
+                </ul>
+              </div>
+              <span class="price"> <strong> 50 </strong> ريال </span>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="package" id="package3">
+            <label class="form-check-label" for="package3">
+              <img src="img/gold.svg" alt="">
+              <div class="info">
+                <h4> الباقة الذهبية </h4>
+                <p> احصل علي الخدمات بسعر رمزي بالاضافة الي خصومات وعروض مستمرة لمدة سنة</p>
+                <ul>
+                  <li> احصل علي 40 اختبارات </li>
+                  <li> عرض الحل غير محدود </li>
+                  <li> خصم 40% عند التجديد </li>
+                </ul>
+              </div>
+              <span class="price"> <strong> 60 </strong> ريال </span>
+            </label>
+          </div>
+          <div class="btnDiv">
+            <button type="submit" class="btn2"> اشترك</button>
+          </div>
+        </form>
+      </section>
     </div>
   </section>
-
-
-
   <!--////////////////////////////////////////////////////////////////////////////////-->
   <!--////////////////////////////////////////////////////////////////////////////////-->
   <!--////////////////////////////////////////////////////////////////////////////////-->
