@@ -1200,10 +1200,7 @@ header .dropdown:hover .dropdown-content {
   margin-bottom: 8px;
 }
 .profile .profileSide .userInfo {
-  background: linear-gradient(45deg, rgba(229, 229, 229, 0.862745098), #ffffff), url(../img/logo.svg);
-  background-repeat: no-repeat;
-  background-size: cover, 50px 50px;
-  background-position: center, 10px calc(100% + 10px);
+  background: linear-gradient(45deg, rgba(229, 229, 229, 0.862745098), #ffffff);
   padding: 16px;
   border-radius: 12px;
   color: var(--mainColor);
