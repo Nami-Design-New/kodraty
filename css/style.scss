@@ -1102,14 +1102,14 @@ header {
       margin-bottom: 8px;
     }
     .userInfo {
-      background: linear-gradient(45deg, #406ab3dc, #406ab3),
+      background: linear-gradient(45deg, #e5e5e5dc, #ffffff),
         url(../img/logo.svg);
       background-repeat: no-repeat;
-      background-size: cover, 70px 70px;
+      background-size: cover, 50px 50px;
       background-position: center, 10px calc(100% + 10px);
       padding: 16px;
       border-radius: 12px;
-      color: var(--whiteColor);
+      color: var(--mainColor);
       display: flex;
       flex-direction: column;
       gap: 8px;
