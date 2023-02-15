@@ -465,7 +465,7 @@ textarea.inputForm {
           width: 100%;
         }
         form {
-          width: min(100% - 30px, 450px);
+          width: min(100% - 30px, 480px);
           display: flex;
           flex-direction: column;
           gap: 16px;
@@ -1508,6 +1508,28 @@ header {
   }
 }
 
+
+.socialLogin{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  .loginWay{
+    display: flex;
+    flex: 1;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--whiteColor);
+    padding: 12px;
+    border-radius: 8px;
+    min-width: 220px;
+
+    .icon{
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

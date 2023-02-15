@@ -520,7 +520,7 @@ textarea.inputForm {
   }
 }
 .loginPage .formContainer .sign .formBox form {
-  width: min(100% - 30px, 450px);
+  width: min(100% - 30px, 480px);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -2586,6 +2586,28 @@ header .dropdown:hover .dropdown-content {
   width: 100%;
   justify-content: center;
   display: flex;
+}
+
+.socialLogin {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.socialLogin .loginWay {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  align-items: center;
+  background-color: var(--whiteColor);
+  padding: 12px;
+  border-radius: 8px;
+  min-width: 220px;
+}
+.socialLogin .loginWay .icon {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 /* PC device :992px. */
