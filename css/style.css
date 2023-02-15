@@ -718,7 +718,7 @@ header nav .navBtn span {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--mainColor);
+  background-color: var(--secondColor);
   margin: 4px 0;
   transition: var(--transition);
 }
