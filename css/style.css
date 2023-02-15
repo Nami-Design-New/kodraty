@@ -1,5 +1,5 @@
 :root {
-  --mainColor: #406ab3;
+  --mainColor: #7c5b48;
   --mainColor10: #406ab310;
   --mainColor30: #406ab330;
   --secondColor: #eb9c22;
@@ -8,8 +8,8 @@
   --gold: #ffd700;
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
-  --bodyColor: #fdfeff;
-  --textColor: #898989;
+  --bodyColor: #7e5a44;
+  --textColor: #bfbfbf;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
@@ -89,7 +89,7 @@ p {
 
 @media (max-width: 767px) {
   .container,
-.container-fluid {
+  .container-fluid {
     padding: 0px 8px;
   }
 }
@@ -112,6 +112,7 @@ img {
 body {
   background-color: var(--bodyColor);
   overflow-x: hidden;
+  background-size: cover;
 }
 
 input {
@@ -152,12 +153,6 @@ input {
 }
 
 ::-moz-placeholder {
-  font-size: 12px;
-  color: #bababa !important;
-  font-weight: normal !important;
-}
-
-:-ms-input-placeholder {
   font-size: 12px;
   color: #bababa !important;
   font-weight: normal !important;
@@ -223,7 +218,7 @@ input {
 }
 @media (max-width: 768px) {
   .swiperContainer .swiper-button-next,
-.swiperContainer .swiper-button-prev {
+  .swiperContainer .swiper-button-prev {
     display: none;
   }
 }
@@ -353,23 +348,23 @@ body {
 }
 
 .btn {
-  background-color: var(--mainColor);
+  background-color: #754c33;
   color: var(--whiteColor);
-  border: 1px solid var(--mainColor);
+  border: 1px solid #754c33;
   padding: 12px 32px;
   transition: var(--transition);
   border-radius: 8px;
 }
 .btn:hover {
   background-color: transparent;
-  color: var(--mainColor);
+  color: var(--whiteColor);
 }
 .btn.btnOutline {
   background-color: transparent;
-  color: var(--mainColor);
+  color: var(--whiteColor);
 }
 .btn.btnOutline:hover {
-  background-color: var(--mainColor);
+  background-color: #754c33;
   color: var(--whiteColor);
 }
 
@@ -423,9 +418,9 @@ body {
 }
 
 .inputForm {
-  border: 1px solid #eee;
+  border: 1px solid #584133;
   min-height: 54px;
-  background-color: #fdfdfd;
+  background-color: #8f6e5a;
   border-radius: 4px;
   padding: 0 10px;
   min-width: 150px;
@@ -440,10 +435,6 @@ textarea.inputForm {
   font-size: 12px !important;
 }
 
-:-ms-input-placeholder {
-  font-size: 12px !important;
-}
-
 ::placeholder {
   font-size: 12px !important;
 }
@@ -454,8 +445,7 @@ textarea.inputForm {
   padding: 40px 0;
   background-image: linear-gradient(to right top, #ffd08a, #e7c28c, #91d0ed, #b9d3ff, #4589ff);
   background-size: 400% 400%;
-  -webkit-animation: gradient 10s ease-in-out infinite;
-          animation: gradient 10s ease-in-out infinite;
+  animation: gradient 10s ease-in-out infinite;
   display: flex;
   transition: var(--transition);
 }
@@ -517,7 +507,7 @@ textarea.inputForm {
   position: relative;
   width: 50%;
   height: 100%;
-  background: var(--whiteColor);
+  background: var(--bodyColor);
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
@@ -549,7 +539,7 @@ textarea.inputForm {
   color: var(--textColor);
 }
 .loginPage .formContainer .sign .formBox p a {
-  color: var(--mainColor);
+  color: var(--whiteColor);
 }
 .loginPage .formContainer .sign .formBox p a:hover {
   color: var(--secondColor);
@@ -615,17 +605,6 @@ textarea.inputForm {
      object-fit: contain;
   margin-bottom: 20px;
 }
-@-webkit-keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -639,7 +618,6 @@ textarea.inputForm {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -689,10 +667,10 @@ header nav .navMenu .navLink {
   padding: 4px 12px;
   display: flex;
   align-items: center;
-  color: var(--blackColor);
+  color: var(--whiteColor);
 }
 header nav .navMenu .navLink:hover {
-  color: var(--mainColor);
+  color: var(--secondColor);
 }
 header nav .navMenu .navLink.btn {
   border: 1px solid var(--mainColor);
@@ -801,6 +779,7 @@ header .dropdown {
   margin: 0 5px;
   max-width: 100%;
   gap: 8px;
+  color: var(--whiteColor);
 }
 header .dropdown .dropdown-content {
   visibility: hidden;
@@ -811,16 +790,17 @@ header .dropdown .dropdown-content {
   border-radius: 8px;
   padding: 4px 0px;
   z-index: 1;
-  background-color: var(--whiteColor);
+  background-color: var(--mainColor);
   box-shadow: 0px 0px 24px 0px rgba(59, 59, 59, 0.0705882353);
   transition: var(--transition);
+  border: 2px solid #754c33;
 }
 header .dropdown .dropdown-content .dropdownItem {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   padding: 8px 16px;
-  color: var(--blackColor);
+  color: var(--whiteColor);
 }
 header .dropdown .dropdown-content .dropdownItem img {
   width: 30px;
@@ -839,32 +819,33 @@ header .dropdown:hover .dropdown-content {
 .headerAnimate {
   box-shadow: var(--BigShadow);
   padding: 0 5px;
-  background-color: var(--whiteColor);
+  background-color: #7c5b48;
 }
 
 .controlSection {
   width: min(100% - 20px, 1320px);
   margin: 24px auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   padding: 60px 40px;
   border-radius: 16px;
   gap: 16px;
   background-color: var(--bodyColor);
-  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  box-shadow: inset 9px 9px 9px #7e5a44, inset -9px -9px 9px #7e5a44;
 }
 .controlSection .control {
   text-align: center;
   flex: 1;
+  width: 100%;
   min-width: 150px;
   padding: 24px 16px;
-  background-color: var(--mainColor10);
+  background-color: #754c33;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  color: var(--blackColor);
+  color: var(--whiteColor);
   position: relative;
   transition: var(--transition);
 }
@@ -905,6 +886,7 @@ header .dropdown:hover .dropdown-content {
 .exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
   font-size: 30px;
   font-weight: 600;
+  color: var(--secondColor);
 }
 @media (max-width: 768px) {
   .exam .multisteps_form .multisteps_form_panel .form_content .question_title h1 {
@@ -919,10 +901,11 @@ header .dropdown:hover .dropdown-content {
 }
 .exam .multisteps_form .multisteps_form_panel .form_content .form_items label {
   padding: 16px;
-  border: 3px solid #efefef;
+  border: 3px solid #754c33;
   border-radius: 8px;
   cursor: pointer;
   position: relative;
+  color: var(--whiteColor);
   flex: 1;
   min-width: 200px;
 }
@@ -1022,7 +1005,6 @@ header .dropdown:hover .dropdown-content {
   display: flex;
   gap: 8px;
   align-items: center;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1037,11 +1019,12 @@ header .dropdown:hover .dropdown-content {
   background-color: var(--secondColor10);
   display: flex;
   flex-direction: column;
+  color: var(--whiteColor);
   gap: 8px;
 }
 .exam .multisteps_form .multisteps_form_panel .correctAnswer .answer h6 {
   font-size: 12px;
-  color: var(--textColor);
+  color: var(--secondColor);
   font-weight: bold;
 }
 .exam .multisteps_form .multisteps_form_panel .correctAnswer .answer img {
@@ -1056,7 +1039,7 @@ header .dropdown:hover .dropdown-content {
   align-items: center;
   border-radius: 16px;
   background-color: var(--bodyColor);
-  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  box-shadow: inset 9px 9px 9px rgba(99, 65, 43, 0.3294117647), inset -9px -9px 9px rgba(135, 87, 59, 0.4823529412);
   padding: 16px;
   padding-right: 24px;
   margin-top: 24px;
@@ -1070,7 +1053,7 @@ header .dropdown:hover .dropdown-content {
   align-items: center;
   min-width: 40px;
   height: 40px;
-  background-color: var(--mainColor);
+  background-color: var(--secondColor);
   color: var(--whiteColor);
   border-radius: 100%;
   transition: var(--transition);
@@ -1102,6 +1085,7 @@ header .dropdown:hover .dropdown-content {
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  color: var(--secondColor);
 }
 .routeNav .navigetor li a img {
   width: 20px;
@@ -1119,7 +1103,7 @@ header .dropdown:hover .dropdown-content {
   transform: translateY(-50%);
 }
 .routeNav .navigetor li:last-child a {
-  color: var(--textColor);
+  color: var(--whiteColor);
 }
 .routeNav .navigetor li:last-child::after {
   display: none;
@@ -1144,7 +1128,7 @@ header .dropdown:hover .dropdown-content {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  color: var(--blackColor);
+  color: var(--secondColor);
   position: relative;
   transition: var(--transition);
 }
@@ -1258,7 +1242,7 @@ header .dropdown:hover .dropdown-content {
 }
 .profile .profileSide .links .logOut {
   margin-top: auto;
-  color: red;
+  color: var(--secondColor);
 }
 .profile .profileSide .links .logOut .icon {
   filter: grayscale(0);
@@ -1312,6 +1296,7 @@ header .dropdown:hover .dropdown-content {
   padding: 24px;
   background-color: var(--whiteColor);
   border-radius: 16px;
+  background-color: #584133;
 }
 .profile .profileContent .eaditAccount p {
   margin-top: 10px;
@@ -1343,14 +1328,14 @@ header .dropdown:hover .dropdown-content {
   align-items: center;
   height: 32px;
   border-radius: 20px;
-  background-color: #eee;
+  background-color: #482d1d;
   position: relative;
   isolation: isolate;
   font-size: 12px;
-  color: var(--mainColor);
+  color: var(--whiteColor);
 }
 .progressBar .inside {
-  background-color: var(--mainColor30);
+  background-color: #754c33;
   border-radius: 20px;
   position: absolute;
   right: 0;
@@ -1362,7 +1347,7 @@ header .dropdown:hover .dropdown-content {
   color: var(--textColor);
 }
 .progressBar.end .inside {
-  background-color: #dcdcdc;
+  background-color: #754c33;
 }
 
 :root {
@@ -2490,6 +2475,9 @@ header .dropdown:hover .dropdown-content {
   flex: 1;
   min-width: 120px;
 }
+.allPercent h5 {
+  color: var(--textColor);
+}
 .allPercent .count .countLine {
   font-weight: bold;
   font-size: calc(var(--percentsize) * 0.3) !important;
@@ -2497,6 +2485,7 @@ header .dropdown:hover .dropdown-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--whiteColor);
 }
 
 .package {
@@ -2504,7 +2493,7 @@ header .dropdown:hover .dropdown-content {
   flex-direction: column;
   gap: 32px;
   padding: 30px 16px;
-  background-color: var(--whiteColor);
+  background-color: var(--mainColor10);
   border-radius: 16px;
   text-align: center;
 }
@@ -2527,10 +2516,10 @@ header .dropdown:hover .dropdown-content {
 }
 .package form .form-check .form-check-label {
   transition: var(--transition);
-  background-color: var(--whiteColor);
+  background-color: #482d1d;
   padding: 20px;
   border-radius: 16px;
-  border: 3px solid #f9f9f9;
+  border: 3px solid #7c5b48;
   width: 100%;
   height: 100%;
   display: flex;
@@ -2539,6 +2528,7 @@ header .dropdown:hover .dropdown-content {
   flex-direction: column;
   cursor: pointer;
   position: relative;
+  color: var(--whiteColor);
 }
 .package form .form-check .form-check-label .info {
   display: flex;
@@ -2550,7 +2540,7 @@ header .dropdown:hover .dropdown-content {
   margin-bottom: 10px;
 }
 .package form .form-check .form-check-label .info p {
-  color: #777;
+  color: #e2e2e2;
 }
 .package form .form-check .form-check-label .info ul {
   padding: 8px 0;
@@ -2622,7 +2612,7 @@ header .dropdown:hover .dropdown-content {
     font-size: 15px;
   }
   a,
-p {
+  p {
     font-size: 14px;
   }
 }
@@ -2651,7 +2641,7 @@ p {
     font-size: 15px;
   }
   a,
-p {
+  p {
     font-size: 14px;
   }
 }
@@ -2680,7 +2670,7 @@ p {
     font-size: 14px;
   }
   a,
-p {
+  p {
     font-size: 13px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 :root {
-  --mainColor: #406ab3;
+  --mainColor: #7c5b48;
   --mainColor10: #406ab310;
   --mainColor30: #406ab330;
   --secondColor: #eb9c22;
@@ -8,8 +8,8 @@
   --gold: #ffd700;
   --whiteColor: #ffffff;
   --blackColor: #1f1f1f;
-  --bodyColor: #fdfeff;
-  --textColor: #898989;
+  --bodyColor: #7e5a44;
+  --textColor: #bfbfbf;
   --transition: all 0.3s ease-in-out;
   --shadow: 0px 2px 4px #c1c1c1;
   --BigShadow: 0 16px 32px 0 #071c1f1a;
@@ -97,7 +97,9 @@ img {
 }
 body {
   background-color: var(--bodyColor);
+  // background: url(https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTT0rDVBu1nIR2PYZ2vWwxDNvYasNqObAXx45KplyOlKkVKOgn_PSiV832ubyrVAw2BLvPZXL1uO6EU4QjESw&s=19);
   overflow-x: hidden;
+  background-size: cover;
 }
 input {
   accent-color: var(--mainColor) !important;
@@ -308,21 +310,21 @@ body {
   gap: 24px;
 }
 .btn {
-  background-color: var(--mainColor);
+  background-color: #754c33;
   color: var(--whiteColor);
-  border: 1px solid var(--mainColor);
+  border: 1px solid #754c33;
   padding: 12px 32px;
   transition: var(--transition);
   border-radius: 8px;
   &:hover {
     background-color: transparent;
-    color: var(--mainColor);
+    color: var(--whiteColor);
   }
   &.btnOutline {
     background-color: transparent;
-    color: var(--mainColor);
+    color: var(--whiteColor);
     &:hover {
-      background-color: var(--mainColor);
+      background-color: #754c33;
       color: var(--whiteColor);
     }
   }
@@ -374,9 +376,9 @@ body {
   }
 }
 .inputForm {
-  border: 1px solid #eee;
+  border: 1px solid #584133;
   min-height: 54px;
-  background-color: #fdfdfd;
+  background-color: #8f6e5a;
   border-radius: 4px;
   padding: 0 10px;
   min-width: 150px;
@@ -453,7 +455,7 @@ textarea.inputForm {
         position: relative;
         width: 50%;
         height: 100%;
-        background: var(--whiteColor);
+        background: var(--bodyColor);
         display: flex;
         flex-direction: column;
         padding: 30px 20px;
@@ -481,7 +483,7 @@ textarea.inputForm {
         p {
           color: var(--textColor);
           a {
-            color: var(--mainColor);
+            color: var(--whiteColor);
             &:hover {
               color: var(--secondColor);
             }
@@ -601,9 +603,9 @@ header {
         padding: 4px 12px;
         display: flex;
         align-items: center;
-        color: var(--blackColor);
+        color: var(--whiteColor);
         &:hover {
-          color: var(--mainColor);
+          color: var(--secondColor);
         }
         &.btn {
           border: 1px solid var(--mainColor);
@@ -712,6 +714,7 @@ header {
     margin: 0 5px;
     max-width: 100%;
     gap: 8px;
+    color: var(--whiteColor);
     .dropdown-content {
       visibility: hidden;
       opacity: 0;
@@ -721,15 +724,17 @@ header {
       border-radius: 8px;
       padding: 4px 0px;
       z-index: 1;
-      background-color: var(--whiteColor);
+      background-color: var(--mainColor);
       box-shadow: 0px 0px 24px 0px #3b3b3b12;
       transition: var(--transition);
+      border: 2px solid #754c33;
+
       .dropdownItem {
         display: flex;
         align-items: center;
         margin-bottom: 10px;
         padding: 8px 16px;
-        color: var(--blackColor);
+        color: var(--whiteColor);
         img {
           width: 30px;
           height: 20px;
@@ -749,30 +754,32 @@ header {
 .headerAnimate {
   box-shadow: var(--BigShadow);
   padding: 0 5px;
-  background-color: var(--whiteColor);
+  background-color: #7c5b48;
 }
 .controlSection {
   width: min(100% - 20px, 1320px);
   margin: 24px auto;
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
+  flex-direction: column;
   padding: 60px 40px;
   border-radius: 16px;
   gap: 16px;
   background-color: var(--bodyColor);
-  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  box-shadow: inset 9px 9px 9px #7e5a44, inset -9px -9px 9px #7e5a44;
   .control {
     text-align: center;
     flex: 1;
+    width: 100%;
     min-width: 150px;
     padding: 24px 16px;
-    background-color: var(--mainColor10);
+    background-color: #754c33;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    color: var(--blackColor);
+    color: var(--whiteColor);
     position: relative;
     transition: var(--transition);
     img {
@@ -808,6 +815,7 @@ header {
         .question_title h1 {
           font-size: 30px;
           font-weight: 600;
+          color: var(--secondColor);
           @media (max-width: 768px) {
             font-size: 22px;
           }
@@ -819,10 +827,11 @@ header {
           gap: 16px;
           label {
             padding: 16px;
-            border: 3px solid #efefef;
+            border: 3px solid #754c33;
             border-radius: 8px;
             cursor: pointer;
             position: relative;
+            color: var(--whiteColor);
             flex: 1;
             min-width: 200px;
             &:after {
@@ -937,10 +946,11 @@ header {
           background-color: var(--secondColor10);
           display: flex;
           flex-direction: column;
+          color: var(--whiteColor);
           gap: 8px;
           h6 {
             font-size: 12px;
-            color: var(--textColor);
+            color: var(--secondColor);
             font-weight: bold;
           }
           img {
@@ -962,7 +972,7 @@ header {
   align-items: center;
   border-radius: 16px;
   background-color: var(--bodyColor);
-  box-shadow: inset 9px 9px 9px #eeeff0, inset -9px -9px 9px #ffffff;
+  box-shadow: inset 9px 9px 9px #63412b54, inset -9px -9px 9px #87573b7b;
   padding: 16px;
   padding-right: 24px;
   margin-top: 24px;
@@ -975,7 +985,7 @@ header {
     align-items: center;
     min-width: 40px;
     height: 40px;
-    background-color: var(--mainColor);
+    background-color: var(--secondColor);
     color: var(--whiteColor);
     border-radius: 100%;
     transition: var(--transition);
@@ -1005,6 +1015,7 @@ header {
         display: flex;
         align-items: center;
         text-transform: capitalize;
+        color: var(--secondColor);
         img {
           width: 20px;
           height: 20px;
@@ -1022,7 +1033,7 @@ header {
       }
       &:last-child {
         a {
-          color: var(--textColor);
+          color: var(--whiteColor);
         }
         &::after {
           display: none;
@@ -1049,7 +1060,7 @@ header {
     flex-direction: column;
     gap: 16px;
     align-items: center;
-    color: var(--blackColor);
+    color: var(--secondColor);
     position: relative;
     transition: var(--transition);
     img {
@@ -1158,7 +1169,7 @@ header {
       }
       .logOut {
         margin-top: auto;
-        color: red;
+        color: var(--secondColor);
         .icon {
           filter: grayscale(0);
         }
@@ -1202,7 +1213,6 @@ header {
     flex-direction: column;
     gap: 24px;
 
-    
     // padding: 30px;
     // background-color: var(--whiteColor);
     border-radius: 16px;
@@ -1219,6 +1229,7 @@ header {
       padding: 24px;
       background-color: var(--whiteColor);
       border-radius: 16px;
+      background-color: #584133;
       p {
         margin-top: 10px;
       }
@@ -1228,39 +1239,38 @@ header {
         flex-wrap: wrap;
       }
     }
-    
-    .allExamsPage{
+
+    .allExamsPage {
       width: 100%;
       padding-top: 30px;
-      .myExamTitle{
+      .myExamTitle {
         width: 100%;
         font-weight: bold;
       }
-      .singleExam{
+      .singleExam {
         background-color: var(--mainColor10);
-        &:hover{
+        &:hover {
           background-color: var(--mainColor);
         }
       }
     }
-
   }
 }
-.progressBar{
+.progressBar {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 32px;
   border-radius: 20px;
-  background-color: #eee;
+  background-color: #482d1d;
   position: relative;
   isolation: isolate;
   font-size: 12px;
-  color: var(--mainColor);
+  color: var(--whiteColor);
 
-  .inside{
-    background-color: var(--mainColor30);
+  .inside {
+    background-color: #754c33;
     border-radius: 20px;
     position: absolute;
     right: 0;
@@ -1268,10 +1278,10 @@ header {
     height: 100%;
     z-index: -1;
   }
-  &.end{
+  &.end {
     color: var(--textColor);
-    .inside{
-      background-color: #dcdcdc;
+    .inside {
+      background-color: #754c33;
     }
   }
 }
@@ -1380,6 +1390,9 @@ header {
     flex: 1;
     min-width: 120px;
   }
+  h5{
+    color: var(--textColor);
+  }
   .count {
     .countLine {
       font-weight: bold;
@@ -1388,6 +1401,7 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
+      color: var(--whiteColor);
     }
   }
 }
@@ -1397,7 +1411,7 @@ header {
   flex-direction: column;
   gap: 32px;
   padding: 30px 16px;
-  background-color: var(--whiteColor);
+  background-color: var(--mainColor10);
   border-radius: 16px;
   text-align: center;
   h3 {
@@ -1417,10 +1431,10 @@ header {
       }
       .form-check-label {
         transition: var(--transition);
-        background-color: var(--whiteColor);
+        background-color: #482d1d;
         padding: 20px;
         border-radius: 16px;
-        border: 3px solid #f9f9f9;
+        border: 3px solid #7c5b48;
         width: 100%;
         height: 100%;
         display: flex;
@@ -1429,6 +1443,7 @@ header {
         flex-direction: column;
         cursor: pointer;
         position: relative;
+        color: var(--whiteColor);
 
         .info {
           display: flex;
@@ -1439,7 +1454,7 @@ header {
             margin-bottom: 10px;
           }
           p {
-            color: #777;
+            color: #e2e2e2;
           }
 
           ul {
@@ -1449,11 +1464,9 @@ header {
             flex-direction: column;
             gap: 4px;
             list-style: none;
-          
           }
-
         }
-        .price{
+        .price {
           position: absolute;
           left: 10px;
           top: 10px;
@@ -1465,7 +1478,7 @@ header {
           padding: 12px 8px;
           font-size: 10px;
           transition: var(--transition);
-          strong{
+          strong {
             font-size: 20px;
           }
         }
@@ -1481,10 +1494,9 @@ header {
         border: 3px solid var(--secondColor);
         box-shadow: 0px 0px 20px #eee;
 
-        .price{
+        .price {
           background-color: var(--secondColor);
           color: var(--whiteColor);
-          
         }
       }
     }
